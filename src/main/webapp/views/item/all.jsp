@@ -40,6 +40,21 @@
             <h6 class="m-0 font-weight-bold text-primary">Item ALL</h6>
 
             <form id="search_form" class="form-inline well">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="text" name="min_price" class="form-control" id="min_price" placeholder="Enter min_price" value="${is.min_price}">
+                    </div>
+                    <label class="control-label col-sm-10" for="min_price">원 부터</label>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-10">
+                        <input type="text" name="max_price" class="form-control" id="max_price" placeholder="Enter max_price" value="${is.max_price}">
+                    </div>
+                    <label class="control-label col-sm-10" for="max_price">원 까지</label>
+                </div>
+
 <%--                <div class="form-group">--%>
 <%--                    <label class="control-label col-sm-2" for="price">PRICE</label>--%>
 <%--                    <div class="col-sm-10">--%>
@@ -48,7 +63,7 @@
 <%--                </div>--%>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="name">NAME:</label>
+                    <label class="control-label col-sm-10" for="name">NAME:</label>
                     <div class="col-sm-10">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" value="${is.name}">
                     </div>

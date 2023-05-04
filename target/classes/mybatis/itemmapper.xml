@@ -24,9 +24,9 @@
     <select id="search" parameterType="itemSearch" resultType="item">
         SELECT * FROM item
         <where>
-<!--            <if test="price != null and !loc.equals('')">-->
-<!--                loc = UPPER(#{loc})-->
-<!--            </if>-->
+            <if test="price != null and !price.equals('')">
+                AND price BETWEEN #{min_price} AND #{max_price}
+            </if>
             <if test="name != null and !name.equals('')">
                 AND name LIKE '%'||#{name}||'%'
             </if>
